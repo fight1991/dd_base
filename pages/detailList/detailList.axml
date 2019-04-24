@@ -1,0 +1,16 @@
+<!-- 列表 -->
+<list>
+  <block a:for="{{items}}">
+    <list-item
+      className="{{index === 0 ? 'am-list-sticky' : ''}}"
+      thumb="{{item.thumb}}"
+      index="{{index}}"
+      onClick="onItemClick"
+      key="items-{{index}}"
+      wrap="{{false}}"
+    >
+      {{item.title}}
+      <view class="am-list-brief">发布时间:{{item.brief}}</view>
+    </list-item>
+  </block>
+</list>

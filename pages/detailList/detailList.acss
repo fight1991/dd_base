@@ -1,0 +1,18 @@
+page {
+  background-color: #fff;
+}
+.am-list-item {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  margin: 0 15px;
+}
+.am-list-content {
+  font-size: 14px;
+}
+.am-list-brief {
+  font-size: 12px;
+  padding: 2px 0;
+}
+.am-list {
+  padding-right: 10px;
+}

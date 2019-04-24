@@ -1,0 +1,8 @@
+<view class="params-area">
+  <view class="params-info" a:for="{{gridList}}" a:for-item="item1">
+    <view class="list-title">
+      <text class="left">{{item1.title}}</text>
+    </view>
+    <grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{item1.navList}}" />
+  </view>
+</view>

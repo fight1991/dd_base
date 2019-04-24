@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "grid":"mini-ddui/es/grid/index",
+    "list":"mini-ddui/es/list/index",
+    "list-item":"mini-ddui/es/list/list-item/index"
+  },
+  "pullRefresh": true
+}

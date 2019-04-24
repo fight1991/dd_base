@@ -1,0 +1,45 @@
+<!-- 轮播区域 -->
+<view class="banner">
+  <swiper
+  indicator-dots
+  autoplay
+  interval="{{interval}}"
+  >
+    <block a:for="{{imgUrls}}" key="id">
+      <swiper-item>
+        <image src="{{item.src}}" mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 宫格导航 -->
+<grid  onGridItemClick="onItemClick" columnNum="{{5}}" list="{{localGridList}}" />
+<!-- <grid a:else="{{localGridList.length === 1}}" onGridItemClick="onItemClick" columnNum="{{5}}" list="{{gridList}}" /> -->
+<!-- 列表 -->
+<!-- <list a:for="{{itemList}}" a:for-item="item1">
+  <view slot="header">{{item1.title}}</view>
+  <block a:for="{{item1.list}}" a:for-item="item2">
+    <list-item
+      key="item2-{{index}}"
+	    index="{{index}}"
+      last="{{index === (item1.list.length - 1)}}"
+    >
+      {{item2.title}}
+      <view class="am-list-brief">{{item2.brief}}</view>
+    </list-item>
+  </block>
+</list> -->
+<view class="list-info" a:for="{{itemList}}" a:for-item="item1" key="id">
+  <view class="list-title">
+    <text class="left">{{item1.title}}</text>
+    <navigator url="../detailList/detailList" redirect hover-class="className"></navigator>
+  </view>
+  <view class="list-item" a:for="{{item1.list}}" a:for-item="item2" key="pid">
+    <view class="txt">
+      <text class="dot"></text>
+      <text>{{item2.brief}}</text>
+    </view>
+    <view class="time">{{item2.time}}</view>
+  </view>
+</view>
+

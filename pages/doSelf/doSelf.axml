@@ -1,0 +1,20 @@
+<view class="params-area">
+  <!-- 暂存区 -->
+  <grid onGridItemClick="onItemClickReduce" columnNum="{{5}}" list="{{newGridList}}" />
+  <!-- 选择区 -->
+  <view class="params-info" a:for="{{addGridList}}" a:for-item="item1" a:for-index="idx">
+    <view class="list-title">
+      <text class="left">{{item1.title}}</text>
+    </view>
+    <view class="list-content">
+      <view class="image" a:for="{{item1.navList}}" a:for-item="item2" onTap="addIcon" data-idx="{{idx}}" data-info="{{item2}}" data-index="{{index}}">
+        <image src="{{item2.icon}}" mode="widthFix" />
+        <text>{{item2.text}}</text>
+      </view>   
+    </view>
+    <!-- <grid onGridItemClick="onItemClickAdd"  columnNum="{{5}}" list="{{addGridList}}" /> -->
+  </view>
+</view>
+<view class="section">
+  <button type="primary" onTap="addConfirm">确认</button>
+</view>
